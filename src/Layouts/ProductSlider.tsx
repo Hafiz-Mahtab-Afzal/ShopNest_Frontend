@@ -17,6 +17,13 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ items, products }) => {
     <div className="py-4">
       <Swiper
         slidesPerView={items}
+        breakpoints={{
+          // mobile par 2 products, laptop (1024+) par pehle jaisa
+          0: { slidesPerView: 2, spaceBetween: 12 },
+          640: { slidesPerView: 3, spaceBetween: 16 },
+          768: { slidesPerView: 4, spaceBetween: 16 },
+          1024: { slidesPerView: items, spaceBetween: 20 },
+        }}
         spaceBetween={20}
         navigation={true}
         modules={[Navigation]}

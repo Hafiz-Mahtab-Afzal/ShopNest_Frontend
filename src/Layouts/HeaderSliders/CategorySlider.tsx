@@ -32,9 +32,16 @@ const categories = [
 
 const CategorySlider = () => {
   return (
-    <div className="container py-8 pb-4">
+    <div className="container pt-4 sm:pt-8 pb-4">
       <Swiper
         slidesPerView={7}
+        breakpoints={{
+          // mobile par 2 categories, laptop (1024+) par pehle jaisa
+          0: { slidesPerView: 2, spaceBetween: 12 },
+          640: { slidesPerView: 3, spaceBetween: 16 },
+          768: { slidesPerView: 4, spaceBetween: 20 },
+          1024: { slidesPerView: 7, spaceBetween: 30 },
+        }}
         spaceBetween={30}
         navigation={true}
         modules={[Navigation]}
@@ -43,11 +50,11 @@ const CategorySlider = () => {
         {categories.map((cat) => (
           <SwiperSlide key={cat.slug}>
             <Link to={`/category/${cat.slug}`}>
-              <div className="item rounded-md p-4 bg-white hover:shadow-md transition-shadow duration-200">
+              <div className="item rounded-md p-3 sm:p-4 bg-white hover:shadow-md transition-shadow duration-200">
                 <img
                   src={cat.img}
                   alt={cat.name}
-                  className="h-36 hover:scale-110 transition-transform duration-500 mx-auto"
+                  className="h-28 sm:h-36 hover:scale-110 transition-transform duration-500 mx-auto"
                 />
                 <h3 className="text-[16px] p-2 text-center font-[500]">{cat.name}</h3>
               </div>

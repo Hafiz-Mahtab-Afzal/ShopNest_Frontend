@@ -159,7 +159,7 @@ const ChatWidget: React.FC = () => {
       `}</style>
 
       {/* ── FLOATING WIDGET ZONE ── */}
-      <div className="fixed bottom-5 right-5 z-50 flex flex-col items-center">
+      <div className="fixed bottom-3 right-3 lg:bottom-5 lg:right-5 z-50 flex flex-col items-center origin-bottom-right scale-[0.65] lg:transform-none">
         
         {/* Exact Match Speech Layout Header Box */}
         {!isOpen && (

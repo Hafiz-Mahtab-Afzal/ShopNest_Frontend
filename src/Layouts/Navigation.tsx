@@ -54,7 +54,7 @@ const Navigation = () => {
           </div>
 
           {/* ── Nav Links ── */}
-          <div className="col2 order-last lg:order-none mx-auto w-full lg:w-[60%] pl-0 lg:pl-7 overflow-x-auto lg:overflow-visible">
+          <div className="col2 order-last lg:order-none mx-auto w-full lg:w-[60%] pl-0 lg:pl-7 overflow-x-auto lg:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <ul className="flex items-center justify-start lg:justify-center gap-2 lg:gap-5 nav">
 
               {/* Fashion — dropdown wala */}
@@ -110,7 +110,7 @@ const Navigation = () => {
           </div>
 
           {/* ── Free Delivery ── */}
-          <div className="col3 w-auto lg:w-[20%] pl-0 lg:pl-16 hover:text-red-600">
+          <div className="col3 hidden lg:block w-auto lg:w-[20%] pl-0 lg:pl-16 hover:text-red-600">
             <p className="text-[14px] font-[500] flex items-center gap-3">
               <GoRocket className="text-[18px]" />
               Free International Delivery

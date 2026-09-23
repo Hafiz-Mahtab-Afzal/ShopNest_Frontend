@@ -78,7 +78,8 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <nav className="flex flex-col gap-2 text-[15px] font-medium">
+        {/* ✅ Mobile par koi bhi link dabate hi drawer band ho jaye */}
+        <nav className="flex flex-col gap-2 text-[15px] font-medium" onClick={(e) => { if ((e.target as HTMLElement).closest('a')) setopen(false) }}>
 
           {/* Dashboard */}
           <Link

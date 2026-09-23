@@ -46,18 +46,18 @@ const Header = () => {
   };
   return (
     <header className="bg-white">
-      <div className="top-strip py-3 lg:py-6 ">
+      <div className="top-strip py-2 lg:py-6 ">
         <div className="mx-3 lg:mx-6">
-          <div className="flex flex-col lg:flex-row gap-1 lg:gap-0 pb-4 items-center justify-between text-sm lg:text-base text-center lg:text-left ">
+          <div className="flex flex-col lg:flex-row gap-1 lg:gap-0 pb-2 lg:pb-4 items-center justify-between text-xs sm:text-sm lg:text-base text-center lg:text-left ">
             <div className="col1 w-full lg:w-[50%] pl-0 lg:pl-4 font-[500]">
-              <p> 🚚 Free Delivery on orders above Rs. 2000 | Cash on Delivery Available</p>
+              <p> 🚚 Free Delivery on orders above Rs. 2000<span className="hidden sm:inline"> | Cash on Delivery Available</span></p>
             </div>
 
-            <div className="translate-x-0 lg:translate-x-20">
+            <div className="hidden lg:block lg:translate-x-20">
               <p>Secure Payment | Easy Returns</p>
             </div>
 
-            <div className="col2 w-full lg:w-[16%]">
+            <div className="col2 hidden lg:block w-full lg:w-[16%]">
               <ul>
                 <li className="list-none">
                   <Link to="/help-center" className="text-12px transition  hover:text-primary">
@@ -74,7 +74,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="py-4 border-y border-sky-200">
+          <div className="py-3 lg:py-4 border-y border-sky-200">
             <div className="flex flex-wrap lg:flex-nowrap items-center pl-0 lg:pl-4 justify-between gap-3 lg:gap-6">
               <Link to="/" className="flex items-center gap-2 shrink-0">
                 <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-400 flex items-center justify-center shadow-md">

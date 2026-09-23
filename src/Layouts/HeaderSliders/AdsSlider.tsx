@@ -19,6 +19,12 @@ const AdsSlider: React.FC<AdsSliderProps> = (props) => {
     <div className='py-5 w-full container'>
       <Swiper
         slidesPerView={props.items}
+        breakpoints={{
+          // mobile par aik banner (upar wale slider ki tarah), laptop (1024+) par pehle jaisa
+          0: { slidesPerView: 1, spaceBetween: 12 },
+          640: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: props.items, spaceBetween: 30 },
+        }}
         spaceBetween={30}
         navigation={true}
         modules={[Navigation]}

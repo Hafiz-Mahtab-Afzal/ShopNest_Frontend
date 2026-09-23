@@ -50,7 +50,7 @@ const ProductCard = ({ product }: { product: Product }) => {
     <div className="productItem group relative bg-white rounded-2xl overflow-hidden border border-sky-100 hover:border-sky-300 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(14,165,233,0.15)] flex flex-col">
 
       {/* Image */}
-      <Link to={`/product/${_id}`} className="block relative overflow-hidden h-[210px] bg-sky-50">
+      <Link to={`/product/${_id}`} className="block relative overflow-hidden h-[170px] sm:h-[210px] bg-sky-50">
         <img src={images?.[1]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
         {images?.[1] && (
           <img src={images[0]} className="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -95,13 +95,13 @@ const ProductCard = ({ product }: { product: Product }) => {
       </Link>
 
       {/* Info */}
-      <div className="p-4 flex flex-col gap-1 flex-1">
+      <div className="p-3 sm:p-4 flex flex-col gap-1 flex-1">
         <span className="text-[11px] font-semibold text-sky-500 uppercase tracking-wider">{category}</span>
         <Link to={`/product/${_id}`} className="text-[14px] font-medium text-slate-800 hover:text-sky-600 transition line-clamp-2 leading-snug">{title}</Link>
         <div className="mt-1">
           <Rating rating={rating || 0} />
         </div>
-        <div className="flex items-center gap-2 mt-1">
+        <div className="flex flex-wrap items-center gap-2 mt-1">
           {onSale && discount > 0 ? (
             <>
               <span className="text-sky-600 font-bold text-[16px]">Rs. {discountedPrice}</span>
@@ -114,7 +114,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       </div>
 
       {/* Add to Cart */}
-      <div className="px-4 pb-4">
+      <div className="px-3 sm:px-4 pb-3 sm:pb-4">
         <button
           onClick={handleAddToCart}
           disabled={stock === 0}

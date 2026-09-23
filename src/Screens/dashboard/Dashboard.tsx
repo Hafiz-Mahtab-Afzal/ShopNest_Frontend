@@ -46,7 +46,7 @@ const Dashboard = () => {
   // ✅ Jab ok true hoga, ye return execute hoga
   return (
     <div className='flex'>
-        <div className="w-0 lg:w-[23%] sticky top-0 h-screen overflow-y-auto">
+        <div className="w-0 lg:w-[23%] sticky top-0 z-50 lg:z-auto h-screen overflow-y-auto">
          <Sidebar />
         </div>
         <div className="w-full min-w-0 lg:w-[77%]">
