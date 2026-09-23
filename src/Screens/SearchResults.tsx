@@ -18,6 +18,9 @@ const SearchResults = () => {
   )
   const categories = useSelector((state: RootState) => state.productSlice.categories)
 
+  // totalPages backend se null bhi aa sakta hai, is liye 0 fallback
+  const pageCount = totalPages ?? 0
+
   const [category, setCategory] = useState('')
   const [minPrice, setMinPrice] = useState('')
   const [maxPrice, setMaxPrice] = useState('')
@@ -63,10 +66,10 @@ const SearchResults = () => {
         )}
       </div>
 
-      <div className="flex gap-5 items-start">
+      <div className="flex flex-col lg:flex-row gap-5 items-start">
 
         {/* Sidebar - 20% width, flush left, fixed full height */}
-        <aside className="w-1/5 min-w-[200px] flex-shrink-0 bg-white rounded-lg border border-gray-200 sticky top-0 h-screen overflow-y-auto">
+        <aside className="w-full lg:w-1/5 min-w-0 lg:min-w-[200px] flex-shrink-0 bg-white rounded-lg border border-gray-200 static lg:sticky top-0 h-auto lg:h-screen overflow-y-auto">
           <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
             <h3 className="font-semibold text-[13px] text-gray-800">Filters</h3>
             <button onClick={clearFilters} className="text-[12px] text-sky-600 hover:text-sky-800 font-medium">
@@ -162,7 +165,7 @@ const SearchResults = () => {
         </aside>
 
         {/* Results - 80% width */}
-        <div className="w-4/5  flex-1 -translate-y-12">
+        <div className="w-full lg:w-4/5  flex-1 translate-y-0 lg:-translate-y-12">
           <div className="flex justify-end mb-4">
             <select
               value={sort}
@@ -190,8 +193,8 @@ const SearchResults = () => {
                 ))}
               </div>
 
-              {totalPages > 1 && (
-                <div className="flex items-center justify-center gap-1.5 mt-8">
+              {pageCount > 1 && (
+                <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-1.5 mt-8">
                   <button
                     onClick={() => setPage((p) => Math.max(1, p - 1))}
                     disabled={currentPage === 1}
@@ -200,7 +203,7 @@ const SearchResults = () => {
                     Prev
                   </button>
 
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
+                  {Array.from({ length: pageCount }, (_, i) => i + 1).map((num) => (
                     <button
                       key={num}
                       onClick={() => setPage(num)}
@@ -215,7 +218,7 @@ const SearchResults = () => {
                   ))}
 
                   <button
-                    onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                    onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
                     disabled={currentPage === totalPages}
                     className="px-3 py-1.5 rounded-md border border-gray-300 text-[13px] text-gray-600 disabled:opacity-30 hover:bg-gray-50"
                   >

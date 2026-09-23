@@ -46,18 +46,18 @@ const Header = () => {
   };
   return (
     <header className="bg-white">
-      <div className="top-strip py-6 ">
-        <div className="mx-6">
-          <div className="flex pb-4 items-center justify-between ">
-            <div className="col1 w-[50%] pl-4 font-[500]">
+      <div className="top-strip py-3 lg:py-6 ">
+        <div className="mx-3 lg:mx-6">
+          <div className="flex flex-col lg:flex-row gap-1 lg:gap-0 pb-4 items-center justify-between text-sm lg:text-base text-center lg:text-left ">
+            <div className="col1 w-full lg:w-[50%] pl-0 lg:pl-4 font-[500]">
               <p> 🚚 Free Delivery on orders above Rs. 2000 | Cash on Delivery Available</p>
             </div>
 
-            <div className="translate-x-20">
+            <div className="translate-x-0 lg:translate-x-20">
               <p>Secure Payment | Easy Returns</p>
             </div>
 
-            <div className="col2 w-[16%]">
+            <div className="col2 w-full lg:w-[16%]">
               <ul>
                 <li className="list-none">
                   <Link to="/help-center" className="text-12px transition  hover:text-primary">
@@ -75,22 +75,22 @@ const Header = () => {
           </div>
 
           <div className="py-4 border-y border-sky-200">
-            <div className="flex items-center pl-4 justify-between gap-6">
+            <div className="flex flex-wrap lg:flex-nowrap items-center pl-0 lg:pl-4 justify-between gap-3 lg:gap-6">
               <Link to="/" className="flex items-center gap-2 shrink-0">
                 <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-400 flex items-center justify-center shadow-md">
                   <span className="text-white font-bold text-lg">S</span>
                 </div>
                 <div>
-                  <span className="text-xl font-bold text-sky-600">Shop</span>
-                  <span className="text-xl font-bold text-cyan-500">Nest</span>
+                  <span className="text-lg lg:text-xl font-bold text-sky-600">Shop</span>
+                  <span className="text-lg lg:text-xl font-bold text-cyan-500">Nest</span>
                 </div>
               </Link>
 
-              <div className="flex-1 max-w-xl">
+              <div className="order-last lg:order-none w-full lg:w-auto flex-none lg:flex-1 max-w-xl">
                 <Searchbar />
               </div>
 
-              <div className="flex items-center pr-12 gap-3">
+              <div className="flex items-center ml-auto lg:ml-0 pr-0 lg:pr-12 gap-2 sm:gap-3">
                 {user ? (
                   <div className="relative">
                     <button
@@ -161,17 +161,17 @@ const Header = () => {
                   </div>
                 ) : (
                   <div className="flex items-center">
-                    <Link to="/Login" className="hover:text-sky-600 transition text-[18px] pr-1">
+                    <Link to="/Login" className="hover:text-sky-600 transition text-sm sm:text-[18px] pr-1">
                       Login
                     </Link>
                     |
-                    <Link to="/SignUp" className="hover:text-sky-600 transition text-[18px] pl-1">
+                    <Link to="/SignUp" className="hover:text-sky-600 transition text-sm sm:text-[18px] pl-1">
                       Register
                     </Link>
                   </div>
                 )}
 
-                <button className="text-[26px] text-black cursor-pointer hover:text-sky-600 transition">
+                <button className="hidden sm:block text-[26px] text-black cursor-pointer hover:text-sky-600 transition">
                   <IoGitCompare />
                 </button>
 
@@ -190,7 +190,7 @@ const Header = () => {
                     )}
                   </button>
                   {showWishlistDropdown && (
-                    <div className="absolute right-0 top-13 w-72 bg-white border border-sky-100 rounded-2xl shadow-2xl z-[99999]">
+                    <div className="absolute right-0 top-13 w-72 max-w-[80vw] bg-white border border-sky-100 rounded-2xl shadow-2xl z-[99999]">
                       <div className="p-3 bg-gradient-to-r from-sky-500 to-cyan-400 text-white font-semibold rounded-t-2xl text-sm">
                         Wishlist ({wishlistItems.length})
                       </div>
@@ -260,7 +260,7 @@ const Header = () => {
                     )}
                   </button>
                   {showCartDropdown && (
-                    <div className="absolute right-0 top-13 w-80 bg-white border border-sky-100 rounded-2xl shadow-2xl z-[99999]">
+                    <div className="absolute right-0 top-13 w-80 max-w-[80vw] bg-white border border-sky-100 rounded-2xl shadow-2xl z-[99999]">
                       <div className="p-3 bg-gradient-to-r from-sky-500 to-cyan-400 text-white rounded-t-2xl flex justify-between items-center text-sm font-semibold">
                         <span>Cart ({cartTotalQuantity})</span>
                         <span>Rs. {cartTotal.toFixed(0)}</span>

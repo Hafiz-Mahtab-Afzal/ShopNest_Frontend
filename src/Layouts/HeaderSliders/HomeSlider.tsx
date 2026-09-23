@@ -23,8 +23,8 @@ const HomeSlider = () => {
       >
         {slides.map((src, i) => (
           <SwiperSlide key={i}>
-            <div className="px-10">
-              <img className="h-96 w-full object-fill rounded-lg" src={src} alt={`slide-${i}`} />
+            <div className="px-2 sm:px-6 lg:px-10">
+              <img className="h-32 sm:h-56 md:h-64 lg:h-96 w-full object-fill rounded-lg" src={src} alt={`slide-${i}`} />
             </div>
           </SwiperSlide>
         ))}

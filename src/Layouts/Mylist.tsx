@@ -40,7 +40,16 @@ const Mylist = () => {
    * addToCart expects a product object — adjust shape if your cartSlice differs.
    */
   const handleMoveToCart = (item: WishlistItem) => {
-    dispatch(addToCart({ ...item, quantity: 1 }))
+    dispatch(
+      addToCart({
+        _id: item._id,
+        title: item.title,
+        price: item.price,
+        images: item.images,
+        onSale: item.onSale ?? false,
+        discount: item.discount ?? 0,
+      })
+    )
     dispatch(removeFromWishlist(item._id))
   }
 
@@ -50,7 +59,7 @@ const Mylist = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4">
         <FaHeart className="text-6xl text-sky-200 mb-4" />
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">Your wishlist is empty</h2>
+        <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-2">Your wishlist is empty</h2>
         <p className="text-gray-500 mb-8 text-center">
           Save items you love — they'll be waiting here for you.
         </p>
@@ -71,10 +80,10 @@ const Mylist = () => {
       <div className="max-w-4xl mx-auto px-4">
 
         {/* ── Header Banner ───────────────────────────────────────────────── */}
-        <div className="bg-gradient-to-r from-sky-700 via-sky-600 to-sky-700 rounded-t-lg p-6 mb-0">
-          <div className="flex items-center justify-between">
+        <div className="bg-gradient-to-r from-sky-700 via-sky-600 to-sky-700 rounded-t-lg p-4 lg:p-6 mb-0">
+          <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-3 lg:gap-0">
             <div>
-              <h1 className="text-3xl font-bold text-white flex items-center gap-3">
+              <h1 className="text-2xl lg:text-3xl font-bold text-white flex items-center gap-3">
                 <FaHeart /> My Wishlist
               </h1>
               <p className="text-sky-200 mt-1">
@@ -105,7 +114,7 @@ const Mylist = () => {
                   <img
                     src={item.images?.[0]}
                     alt={item.title}
-                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                    className="w-16 h-16 sm:w-24 sm:h-24 object-cover rounded-lg flex-shrink-0"
                   />
 
                   {/* Info */}

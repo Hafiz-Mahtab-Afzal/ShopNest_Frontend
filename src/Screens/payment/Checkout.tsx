@@ -89,18 +89,18 @@ const Checkout = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-20 bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center px-4 lg:px-0 py-10 lg:py-20 bg-gray-100">
       <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg">
 
         {/* Header */}
-        <div className="bg-sky-700 px-10 py-8 text-white text-center">
-          <h2 className="text-3xl font-bold">Checkout</h2>
+        <div className="bg-sky-700 px-5 lg:px-10 py-8 text-white text-center">
+          <h2 className="text-2xl lg:text-3xl font-bold">Checkout</h2>
           <p className="text-white/70 text-sm mt-1">Fill in your delivery details</p>
         </div>
 
         {/* Form */}
-        <div className="bg-white px-10 py-8">
-          <form onSubmit={checkouthandler} className="grid grid-cols-2 gap-4">
+        <div className="bg-white px-5 lg:px-10 py-8">
+          <form onSubmit={checkouthandler} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
             {/* Phone */}
             <div className="relative">
@@ -131,7 +131,7 @@ const Checkout = () => {
             </div>
 
             {/* Address */}
-            <div className="relative col-span-2">
+            <div className="relative sm:col-span-2">
               <FiHome className="absolute left-3 top-1/2 -translate-y-1/2 text-sky-700" />
               <input
                 type="text"
@@ -173,7 +173,7 @@ const Checkout = () => {
             </div>
 
             {/* Country */}
-            <div className="relative col-span-2">
+            <div className="relative sm:col-span-2">
               <FiGlobe className="absolute left-3 top-1/2 -translate-y-1/2 text-sky-700" />
               <input
                 type="text"
@@ -190,7 +190,7 @@ const Checkout = () => {
             <button
               type="submit"
               disabled={loading}
-              className="col-span-2 mt-2 bg-sky-700 hover:bg-sky-800 text-white py-3 rounded-lg font-semibold transition text-sm tracking-wide disabled:opacity-60"
+              className="sm:col-span-2 mt-2 bg-sky-700 hover:bg-sky-800 text-white py-3 rounded-lg font-semibold transition text-sm tracking-wide disabled:opacity-60"
             >
               {loading ? 'Redirecting to Payment...' : 'Proceed to Payment →'}
             </button>

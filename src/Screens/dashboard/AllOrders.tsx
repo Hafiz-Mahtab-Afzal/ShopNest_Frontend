@@ -175,10 +175,10 @@ const AllOrders = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <h1 className="text-4xl text-center font-bold bg-[#fff] border-blue-500 border-b-2 text-blue-500 py-5">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-bold bg-[#fff] border-blue-500 border-b-2 text-blue-500 py-5">
         All Orders
       </h1>
-      <Box className="mx-16 mt-6">
+      <Box className="mx-4 lg:mx-16 mt-6">
         <DataGrid
           className="!bg-white [&_.MuiDataGrid-columnHeader]:!bg-sky-500 [&_.MuiDataGrid-columnHeaderCheckbox]:!bg-sky-500 [&_.MuiDataGrid-scrollbarFiller--header]:!bg-sky-500 [&_.MuiDataGrid-filler--pinnedRight]:!bg-sky-500"
           rows={rows}

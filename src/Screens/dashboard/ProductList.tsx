@@ -152,14 +152,14 @@ const rows = products && products.map((product,index) => ({
           isLoading={loading}
         />
       )}
-      <h1 className='text-4xl text-center font-bold bg-[#fff]  border-blue-500 border-b-2 text-blue-500 py-5'>ProductList</h1>
+      <h1 className='text-2xl md:text-3xl lg:text-4xl text-center font-bold bg-[#fff]  border-blue-500 border-b-2 text-blue-500 py-5'>ProductList</h1>
       <div className="flex mt-7 justify-center gap-4 ">
         
-        <Button className="!bg-blue-600 !text-white !font-bold !w-60 !translate-y-2 translate-x-96 !px-4 !py-2 !rounded-md" onClick={addproduct}> <IoIosAddCircle className='mr-2 text-xl'  />
+        <Button className="!bg-blue-600 !text-white !font-bold !w-60 !translate-y-2 translate-x-0 lg:translate-x-96 !px-4 !py-2 !rounded-md" onClick={addproduct}> <IoIosAddCircle className='mr-2 text-xl'  />
           Add Product
         </Button>
       </div>
-      <Box className="mx-16 mt-6 " >
+      <Box className="mx-4 lg:mx-16 mt-6 " >
       <DataGrid
           className='!bg-white [&_.MuiDataGrid-columnHeader]:!bg-sky-500 [&_.MuiDataGrid-columnHeaderCheckbox]:!bg-sky-500 [&_.MuiDataGrid-scrollbarFiller--header]:!bg-sky-500 [&_.MuiDataGrid-filler--pinnedRight]:!bg-sky-500'
         rows={rows}

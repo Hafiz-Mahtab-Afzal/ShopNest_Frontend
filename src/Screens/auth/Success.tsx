@@ -6,7 +6,7 @@ const Success = () => {
     <div className="min-h-screen flex items-center justify-center bg-sky-50 px-4">
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md overflow-hidden border border-sky-100">
 
-        <div className="bg-sky-700 px-10 py-8 text-center">
+        <div className="bg-sky-700 px-6 sm:px-10 py-8 text-center">
           <div className="w-14 h-14 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-3">
             <FiCheck className="w-7 h-7 text-white" />
           </div>
@@ -14,7 +14,7 @@ const Success = () => {
           <p className="text-sky-200 text-sm mt-1">Your account is secured</p>
         </div>
 
-        <div className="px-10 py-8 text-center">
+        <div className="px-6 sm:px-10 py-8 text-center">
           <h3 className="text-lg font-semibold text-slate-800 mb-2">
             Password Changed Successfully
           </h3>

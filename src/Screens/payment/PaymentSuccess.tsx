@@ -58,8 +58,8 @@ const PaymentSuccess = () => {
   )
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white rounded-2xl shadow-lg p-12 text-center max-w-md">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 lg:px-0">
+      <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-12 text-center max-w-md">
         <div className="text-6xl mb-4">✅</div>
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Payment Successful!</h2>
         <p className="text-gray-500 mb-6">Your order has been placed successfully.</p>

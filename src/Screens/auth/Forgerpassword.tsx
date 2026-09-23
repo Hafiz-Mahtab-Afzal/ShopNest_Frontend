@@ -48,12 +48,12 @@ const ForgotPassword = () => {
     <div className="min-h-screen flex items-center justify-center bg-sky-50 px-4">
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md overflow-hidden">
 
-        <div className="bg-sky-700 px-10 py-8 text-center">
+        <div className="bg-sky-700 px-6 sm:px-10 py-8 text-center">
           <h2 className="text-2xl font-semibold text-white">Forgot Password?</h2>
           <p className="text-sky-200 text-sm mt-1">Enter your email to receive OTP</p>
         </div>
 
-        <div className="px-10 py-8">
+        <div className="px-6 sm:px-10 py-8">
 
           <div className="flex items-start gap-3 bg-sky-50 border border-sky-200 rounded-lg px-4 py-3 mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-sky-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
   return (
     // Backdrop Overlay
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-      <div className="group select-none w-[320px] flex flex-col p-6 bg-gray-800 border border-gray-700 shadow-2xl rounded-3xl animate-in fade-in zoom-in duration-300">
+      <div className="group select-none w-full max-w-[320px] flex flex-col p-4 sm:p-6 bg-gray-800 border border-gray-700 shadow-2xl rounded-3xl animate-in fade-in zoom-in duration-300">
         
         {/* Icon */}
         <div className="text-center p-3 flex-auto justify-center">
@@ -33,10 +33,10 @@ const Card: React.FC<CardProps> = ({
         </div>
 
         {/* Buttons */}
-        <div className="p-2 mt-4 text-center flex justify-center gap-3">
+        <div className="p-2 mt-4 text-center flex flex-wrap lg:flex-nowrap justify-center gap-3">
           <button 
             onClick={onCancel}
-            className="px-6 py-2.5 text-sm font-semibold tracking-wide border-2 border-gray-600 text-gray-300 rounded-full hover:bg-gray-700 transition duration-300"
+            className="px-4 sm:px-6 py-2.5 text-sm font-semibold tracking-wide border-2 border-gray-600 text-gray-300 rounded-full hover:bg-gray-700 transition duration-300"
           >
             Cancel
           </button>
@@ -44,7 +44,7 @@ const Card: React.FC<CardProps> = ({
           <button 
             onClick={onConfirm}
             disabled={isLoading}
-            className="px-6 py-2.5 text-sm font-semibold tracking-wide bg-red-600 hover:bg-red-700 text-white rounded-full transition duration-300 disabled:opacity-50"
+            className="px-4 sm:px-6 py-2.5 text-sm font-semibold tracking-wide bg-red-600 hover:bg-red-700 text-white rounded-full transition duration-300 disabled:opacity-50"
           >
             {isLoading ? "Deleting..." : "Confirm Delete"}
           </button>

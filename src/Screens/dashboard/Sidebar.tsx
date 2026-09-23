@@ -55,20 +55,20 @@ const Sidebar = () => {
     <>
     <div>
       <button
-        className="fixed pt-4 pl-4 z-50 text-3xl md:hidden"
+        className="fixed pt-4 pl-4 z-50 text-3xl lg:hidden"
         onClick={() => setopen(!open)}
       >
         <LuMenu />
       </button>
 
-      <div className={`h-full min-h-screen p-4 pt-6 bg-gradient-to-b from-sky-50 via-white to-sky-50 border-r border-sky-100 shadow-xl transform transition-transform duration-300
-        md:translate-x-0
-        ${open ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
-        fixed md:static z-40
+      <div className={`h-full min-h-screen overflow-y-auto lg:overflow-visible p-4 pt-6 bg-gradient-to-b from-sky-50 via-white to-sky-50 border-r border-sky-100 shadow-xl transform transition-transform duration-300
+        lg:translate-x-0
+        ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
+        fixed lg:static z-40
       `}>
 
         {/* Logo */}
-        <div className="flex items-center gap-3 mb-10 px-2">
+        <div className="flex items-center gap-3 mt-8 lg:mt-0 mb-10 px-2">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-400 flex items-center justify-center shadow-md shadow-sky-200">
             <span className="text-white font-bold text-lg">S</span>
           </div>
@@ -233,7 +233,7 @@ const Sidebar = () => {
 
       {open && (
         <div
-          className="fixed inset-0 bg-black/50 z-30 md:hidden"
+          className="fixed inset-0 bg-black/50 z-30 lg:hidden"
           onClick={() => setopen(false)}
         />
       )}

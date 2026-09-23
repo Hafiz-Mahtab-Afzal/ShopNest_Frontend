@@ -31,17 +31,17 @@ const AddCategory = () => {
   }
 
   return (
-    <div className="flex justify-center items-center pt-28">
+    <div className="flex justify-center items-center px-4 lg:px-0 pt-16 lg:pt-28">
       <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg">
 
         {/* Header */}
-        <div className="bg-blue-600 px-8 py-7 text-center">
+        <div className="bg-blue-600 px-4 lg:px-8 py-7 text-center">
           <h2 className="text-white text-2xl font-bold">Add Category</h2>
           <p className="text-white/70 text-sm mt-1">Enter a new category name below</p>
         </div>
 
         {/* Form */}
-        <form onSubmit={submithandler} className="bg-white px-8 py-7 flex flex-col gap-3">
+        <form onSubmit={submithandler} className="bg-white px-4 lg:px-8 py-7 flex flex-col gap-3">
 
           {/* Category Input */}
           <div className="flex items-center gap-2 bg-blue-50 rounded-xl px-4 py-3">

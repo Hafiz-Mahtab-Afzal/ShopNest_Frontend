@@ -42,10 +42,10 @@ const Navigation = () => {
   return (
     <>
       <nav className="pb-3 bg-white">
-        <div className="container flex items-center justify-between">
+        <div className="container flex flex-wrap lg:flex-nowrap items-center justify-between">
 
           {/* ── Shop By Categories Button ── */}
-          <div className="col1 w-[20%]">
+          <div className="col1 w-auto lg:w-[20%]">
             <Button onClick={() => setisopencatpanel(true)} className="!text-black gap-2 w-full">
               <RiMenu2Fill className="text-[10px] text-base" />
               Shop By Categories
@@ -54,8 +54,8 @@ const Navigation = () => {
           </div>
 
           {/* ── Nav Links ── */}
-          <div className="col2 mx-auto w-[60%] pl-7">
-            <ul className="flex items-center justify-center gap-5 nav">
+          <div className="col2 order-last lg:order-none mx-auto w-full lg:w-[60%] pl-0 lg:pl-7 overflow-x-auto lg:overflow-visible">
+            <ul className="flex items-center justify-start lg:justify-center gap-2 lg:gap-5 nav">
 
               {/* Fashion — dropdown wala */}
               <li className="list-none relative">
@@ -110,7 +110,7 @@ const Navigation = () => {
           </div>
 
           {/* ── Free Delivery ── */}
-          <div className="col3 w-[20%] pl-16 hover:text-red-600">
+          <div className="col3 w-auto lg:w-[20%] pl-0 lg:pl-16 hover:text-red-600">
             <p className="text-[14px] font-[500] flex items-center gap-3">
               <GoRocket className="text-[18px]" />
               Free International Delivery

@@ -41,13 +41,11 @@ import AddProduct from './Screens/dashboard/Addproduct';
 import Editproduct from './Screens/dashboard/Editproduct';
 import AddCategory from './Screens/dashboard/AddCategory';
 import BlockedUsers from './Screens/dashboard/BlockedUsers';
-import Card from './Screens/dashboard/Card';
 
 
 // Route Guards
 import ProtectedRoute from '../route/ProtectedRoute';
 import PublicRoute from '../route/PublicRoute';
-import Reviews from './Screens/Reviews';
 import AllOrders from './Screens/dashboard/AllOrders';
 // import Reviews from './Screens/Reviews';
 // import Reviews from './Screens/Reviews';
@@ -66,7 +64,6 @@ const TypeScript = () => {
             <Route path="/product/:id" element={<Singlepage />} />
             <Route path="/search" element={<SearchResults />} />
             <Route path="/category/:name" element={<Category />} />
-            <Route path='/card' element={<Card />} />
 
             {/* Private Pages */}
             <Route element={<ProtectedRoute />}>
@@ -74,7 +71,6 @@ const TypeScript = () => {
               <Route path="/orders" element={<Orders />} />
               <Route path="/mylist" element={<Mylist />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="reviews" element={<Reviews />}/>
             </Route>
           </Route>
           

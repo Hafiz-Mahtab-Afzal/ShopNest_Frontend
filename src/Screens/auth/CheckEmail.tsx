@@ -6,7 +6,7 @@ const CheckEmail = () => {
     <div className="min-h-screen flex items-center justify-center bg-sky-50 px-4">
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md overflow-hidden border border-sky-100">
 
-        <div className="bg-sky-700 px-10 py-8 text-center">
+        <div className="bg-sky-700 px-6 sm:px-10 py-8 text-center">
           <div className="w-14 h-14 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-3">
             <BsEnvelope className="w-7 h-7 text-white" />
           </div>
@@ -15,7 +15,7 @@ const CheckEmail = () => {
           <p className="text-white text-sm font-semibold mt-0.5">user@example.com</p>
         </div>
 
-        <div className="px-10 py-8">
+        <div className="px-6 sm:px-10 py-8">
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 mb-6 space-y-3">
             <div className="flex items-center gap-3">

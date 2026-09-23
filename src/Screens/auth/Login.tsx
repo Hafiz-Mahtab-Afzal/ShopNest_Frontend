@@ -62,12 +62,12 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-sky-50 px-4">
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md overflow-hidden">
-        <div className="bg-sky-700 px-10 py-8 text-center">
+        <div className="bg-sky-700 px-6 sm:px-10 py-8 text-center">
           <h2 className="text-2xl font-semibold text-white">Welcome Back</h2>
           <p className="text-sky-200 text-sm mt-1">Login to your account</p>
         </div>
 
-        <div className="px-10 py-8">
+        <div className="px-6 sm:px-10 py-8">
           <form onSubmit={Loginhandler}>
             <div className="mb-4">
               <label className="block text-xs font-medium text-slate-500 uppercase tracking-wider mb-1.5">Email Address</label>

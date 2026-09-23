@@ -150,10 +150,10 @@ const Users = () => {
           message="Are you sure you want to delete this user? This process cannot be undone."
         />
       )}
-      <h1 className="text-4xl text-center font-bold bg-white border-blue-500 border-b-2 text-blue-500 py-5">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-bold bg-white border-blue-500 border-b-2 text-blue-500 py-5">
         Users
       </h1>
-      <Box className="mx-16 mt-6 !bg-white [&_.MuiDataGrid-columnHeader]:!bg-sky-500 [&_.MuiDataGrid-columnHeaderCheckbox]:!bg-sky-500 [&_.MuiDataGrid-scrollbarFiller--header]:!bg-sky-500 [&_.MuiDataGrid-filler--pinnedRight]:!bg-sky-500">
+      <Box className="mx-4 lg:mx-16 mt-6 !bg-white [&_.MuiDataGrid-columnHeader]:!bg-sky-500 [&_.MuiDataGrid-columnHeaderCheckbox]:!bg-sky-500 [&_.MuiDataGrid-scrollbarFiller--header]:!bg-sky-500 [&_.MuiDataGrid-filler--pinnedRight]:!bg-sky-500">
         <DataGrid
           rows={rows}
           columns={columns}

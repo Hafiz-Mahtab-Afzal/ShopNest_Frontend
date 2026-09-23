@@ -84,8 +84,8 @@ const Editproduct = () => {
   }, [id])
 
   return (
-    <div className="flex items-center justify-center p-6">
-      <form onSubmit={submithandler} className="w-full max-w-xl bg-white rounded-2xl shadow-xl p-8">
+    <div className="flex items-center justify-center px-4 pt-16 pb-4 lg:p-6">
+      <form onSubmit={submithandler} className="w-full max-w-xl bg-white rounded-2xl shadow-xl p-5 lg:p-8">
         <h2 className="text-2xl font-bold mb-8 text-center">Edit Product</h2>
 
         {/* Title */}
@@ -112,7 +112,7 @@ const Editproduct = () => {
           />
         </label>
 
-        <div className="flex gap-4 mb-4">
+        <div className="flex flex-col sm:flex-row gap-4 mb-4">
 
           {/* Brand */}
           <label className="flex-1">

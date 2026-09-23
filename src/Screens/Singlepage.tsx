@@ -81,7 +81,7 @@ const Singlepage = () => {
     <div className="bg-gray-50 min-h-screen">
 
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-[1280px] mx-auto px-4 py-2 text-[13px] text-gray-500 flex items-center gap-1">
+        <div className="max-w-[1280px] mx-auto px-4 py-2 text-[13px] text-gray-500 flex flex-wrap lg:flex-nowrap items-center gap-1">
           <Link to="/" className="hover:text-sky-700">Home</Link>
           <span>/</span>
           <span className="capitalize">{category}</span>
@@ -93,7 +93,7 @@ const Singlepage = () => {
       <div className="max-w-[1280px] mx-auto px-4 py-6">
         <div className="bg-white rounded-xl shadow-sm flex flex-col lg:flex-row overflow-hidden">
 
-          <div className="lg:w-[420px] flex-shrink-0 p-5 border-r border-gray-100">
+          <div className="lg:w-[420px] flex-shrink-0 p-5 border-b lg:border-b-0 lg:border-r border-gray-100">
             <div className="w-full aspect-square bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
               {images.length > 0 ? (
                 <img src={images[activeImg]} alt={title} className="w-full h-full object-cover" />
@@ -197,7 +197,7 @@ const Singlepage = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3.5 text-sm font-semibold capitalize border-b-2 -mb-px transition ${
+                className={`px-2 sm:px-6 py-3.5 text-sm font-semibold capitalize border-b-2 -mb-px transition ${
                   activeTab === tab ? 'border-sky-700 text-sky-700' : 'border-transparent text-gray-500 hover:text-gray-800'
                 }`}
               >
@@ -206,7 +206,7 @@ const Singlepage = () => {
             ))}
           </div>
 
-          <div className="p-6">
+          <div className="p-4 lg:p-6">
             {activeTab === 'description' && (
               <p className="text-gray-600 text-sm leading-relaxed max-w-3xl">
                 {discription || 'No description available.'}

@@ -255,7 +255,7 @@ const ChatWidget: React.FC = () => {
 
       {/* ── SHOPNEST PREMIUM CHAT WINDOW ── */}
       <div
-        className={`fixed bottom-28 right-6 z-50 w-80 sm:w-96 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 ${
+        className={`fixed bottom-28 right-6 z-50 w-80 max-w-[90vw] max-h-[70vh] lg:max-h-none sm:w-96 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 ${
           isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
         style={{ height: '520px', background: '#0b0f19', border: '1px solid rgba(6, 182, 212, 0.15)' }}

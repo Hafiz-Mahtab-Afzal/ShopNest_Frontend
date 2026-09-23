@@ -80,10 +80,10 @@ const Cart = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="bg-gradient-to-r from-sky-700 via-sky-600 to-sky-700 rounded-t-lg p-6 mb-6">
-          <div className="flex items-center justify-between">
+        <div className="bg-gradient-to-r from-sky-700 via-sky-600 to-sky-700 rounded-t-lg p-4 lg:p-6 mb-6">
+          <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-3 lg:gap-0">
             <div>
-              <h1 className="text-3xl font-bold text-white">Shopping Cart</h1>
+              <h1 className="text-2xl lg:text-3xl font-bold text-white">Shopping Cart</h1>
               <p className="text-sky-200 mt-1">{cartTotalQuantity} item{cartTotalQuantity !== 1 ? 's' : ''} in your cart</p>
             </div>
             <button onClick={handleClearCart} className="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium">
@@ -97,8 +97,8 @@ const Cart = () => {
             <div className="bg-white rounded-b-lg shadow-lg overflow-hidden">
               <div className="divide-y divide-gray-200">
                 {cartItems.map((item: CartItem) => (
-                  <div key={item._id} className="p-4 flex items-center gap-4 hover:bg-sky-50">
-                    <img src={item.images?.[0]} alt={item.title} className="w-24 h-24 object-cover rounded-lg" />
+                  <div key={item._id} className="p-4 flex flex-wrap lg:flex-nowrap items-center gap-4 hover:bg-sky-50">
+                    <img src={item.images?.[0]} alt={item.title} className="w-16 h-16 sm:w-24 sm:h-24 object-cover rounded-lg" />
 
                     <div className="flex-1">
                       <h3 className="font-semibold text-gray-800">{item.title}</h3>
@@ -125,7 +125,7 @@ const Cart = () => {
                       </button>
                     </div>
 
-                    <div className="text-right min-w-[80px]">
+                    <div className="text-right min-w-[80px] ml-auto lg:ml-0">
                       <p className="font-bold text-lg">
                         Rs. {((item.discountedPrice || item.price) * item.quantity).toFixed(2)}
                       </p>

@@ -112,17 +112,17 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="flex justify-center items-center pt-28">
+    <div className="flex justify-center items-center px-4 lg:px-0 pt-16 lg:pt-28">
       <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg">
 
-        <div className="bg-blue-600 px-8 py-7 text-center">
+        <div className="bg-blue-600 px-4 lg:px-8 py-7 text-center">
           <h2 className="text-white text-2xl font-bold">Add Product</h2>
           <p className="text-white/70 text-sm mt-1">Fill in your product details below</p>
         </div>
 
-        <form onSubmit={submithandler} className="bg-white px-8 py-7 flex flex-col gap-3">
+        <form onSubmit={submithandler} className="bg-white px-4 lg:px-8 py-7 flex flex-col gap-3">
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="flex items-center gap-2 bg-blue-50 rounded-xl px-4 py-3">
               <MdOutlineTitle className="text-blue-600 text-lg shrink-0" />
               <input
@@ -145,7 +145,7 @@ const AddProduct = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
             <div className="flex items-center gap-2 bg-blue-50 rounded-xl px-4 py-3">
               <MdStorefront className="text-blue-600 text-lg shrink-0" />

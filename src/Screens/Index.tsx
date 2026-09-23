@@ -59,14 +59,14 @@ const Index = () => {
             {/* Section 1 — Popular Products */}
             <section className="bg-white py-4 mt-4">
               <div className="container">
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-2 lg:gap-0 mb-2">
                   <div>
                     <h2 className="text-[20px] font-[600]">Popular Products</h2>
                     <p className="text-[14px] font-[400]">
                       Do not miss the current offers until the end of March.
                     </p>
                   </div>
-                  <div className="w-[60%]">
+                  <div className="w-full lg:w-[60%]">
                     <Tabs value={value} onChange={handleTabChange} variant="scrollable" scrollButtons="auto">
                       <Tab label="All" />
                       <Tab label="Dresses" />
@@ -78,13 +78,13 @@ const Index = () => {
               </div>
 
               {/* Free Shipping Banner */}
-              <div className="w-[80%] my-4 m-auto p-4 border-2 border-[#ff5252] flex items-center justify-between">
+              <div className="w-full lg:w-[80%] my-4 m-auto p-4 border-2 border-[#ff5252] flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-0 text-center lg:text-left">
                 <div className="flex items-center gap-4">
-                  <FaShippingFast className="text-[50px]" />
-                  <span className="text-[20px] font-[600] uppercase">Free Shipping</span>
+                  <FaShippingFast className="text-[36px] lg:text-[50px]" />
+                  <span className="text-[16px] lg:text-[20px] font-[600] uppercase">Free Shipping</span>
                 </div>
                 <p className="font-[500]">Free Delivery on orders above Rs. 10,000</p>
-                <p className="font-bold text-[25px]">- Only Rs. 10,000*</p>
+                <p className="font-bold text-[18px] lg:text-[25px]">- Only Rs. 10,000*</p>
               </div>
 
               {/* Ads Slider */}
@@ -105,7 +105,7 @@ const Index = () => {
               {loader ? (
                 <Loader />
               ) : (
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
                   {products.map((product) => (
                     <ProductCard product={product} key={product._id} />
                   ))}

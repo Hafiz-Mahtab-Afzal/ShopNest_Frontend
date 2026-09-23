@@ -156,10 +156,10 @@ const handleUpdateProfile = async () => {
   }
   
   return (
-    <div className="flex gap-5 p-5 bg-gray-100 min-h-screen">
+    <div className="flex flex-col lg:flex-row gap-5 p-3 sm:p-5 bg-gray-100 min-h-screen">
 
       {/* LEFT SIDEBAR */}
-      <div className="w-[260px] bg-white p-5 border rounded-xl shadow-sm">
+      <div className="w-full lg:w-[260px] bg-white p-5 border rounded-xl shadow-sm">
         <div className="text-center">
 
           {/* ✅ Image — hover par change option */}
@@ -220,7 +220,7 @@ const handleUpdateProfile = async () => {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="flex-1 bg-white p-6 border rounded-xl shadow-sm">
+      <div className="flex-1 bg-white p-4 lg:p-6 border rounded-xl shadow-sm">
 
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-lg font-semibold text-gray-800">My Profile</h2>
@@ -229,7 +229,7 @@ const handleUpdateProfile = async () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div className="flex flex-col">
             <label className="text-sm mb-1 text-gray-600 font-medium">First Name</label>
             <input
@@ -251,7 +251,7 @@ const handleUpdateProfile = async () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div className="flex flex-col">
             <label className="text-sm mb-1 text-gray-600 font-medium">Email</label>
             <input

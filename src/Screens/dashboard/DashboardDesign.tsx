@@ -92,17 +92,17 @@ const Dashboarddesign = () => {
 
   return (
     <div>
-      <h1 className='text-4xl text-center font-bold bg-[#fff] border-sky-500 border-b-2 text-sky-600 py-5'>
+      <h1 className='text-2xl md:text-3xl lg:text-4xl text-center font-bold bg-[#fff] border-sky-500 border-b-2 text-sky-600 py-5'>
         Dashboard
       </h1>
 
-      <div className="p-6">
+      <div className="p-4 lg:p-6">
 
         {/* Banner */}
-        <div className="bg-sky-50 rounded-2xl p-8 flex items-center justify-between mb-6">
+        <div className="bg-sky-50 rounded-2xl p-5 lg:p-8 flex items-center justify-between mb-6">
           <div>
-            <h1 className="text-3xl font-bold text-gray-800">Welcome,</h1>
-            <h2 className="text-3xl font-bold text-sky-600">
+            <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">Welcome,</h1>
+            <h2 className="text-2xl lg:text-3xl font-bold text-sky-600">
               Admin Dashboard
             </h2>
             <p className="text-gray-500 mt-2 mb-5">
@@ -125,7 +125,7 @@ const Dashboarddesign = () => {
 
         {/* Stats Boxes */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-green-500 text-white rounded-xl p-5 flex items-center justify-between">
+          <div className="bg-green-500 text-white rounded-xl p-3 sm:p-5 flex items-center justify-between">
             <div>
               <p className="text-sm opacity-80">Total Users</p>
               <p className="text-2xl font-bold mt-1">0</p>
@@ -133,7 +133,7 @@ const Dashboarddesign = () => {
             <ImUsers className="text-4xl opacity-70" />
           </div>
 
-          <div className="bg-sky-500 text-white rounded-xl p-5 flex items-center justify-between">
+          <div className="bg-sky-500 text-white rounded-xl p-3 sm:p-5 flex items-center justify-between">
             <div>
               <p className="text-sm opacity-80">Total Orders</p>
               <p className="text-2xl font-bold mt-1">0</p>
@@ -141,7 +141,7 @@ const Dashboarddesign = () => {
             <MdShoppingCart className="text-4xl opacity-70" />
           </div>
 
-          <div className="bg-purple-600 text-white rounded-xl p-5 flex items-center justify-between">
+          <div className="bg-purple-600 text-white rounded-xl p-3 sm:p-5 flex items-center justify-between">
             <div>
               <p className="text-sm opacity-80">Total Products</p>
               <p className="text-2xl font-bold mt-1">0</p>
@@ -149,7 +149,7 @@ const Dashboarddesign = () => {
             <MdProductionQuantityLimits className="text-4xl opacity-70" />
           </div>
 
-          <div className="bg-pink-500 text-white rounded-xl p-5 flex items-center justify-between">
+          <div className="bg-pink-500 text-white rounded-xl p-3 sm:p-5 flex items-center justify-between">
             <div>
               <p className="text-sm opacity-80">Total Category</p>
               <p className="text-2xl font-bold mt-1">0</p>
@@ -159,7 +159,7 @@ const Dashboarddesign = () => {
         </div>
 
         {/* Chart Section */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mt-6">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 lg:p-6 mt-6">
           <h2 className="text-xl font-bold text-gray-800 mb-1">
             Total Users & Total Sales
           </h2>

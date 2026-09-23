@@ -14,7 +14,7 @@ const Profile = () => {
     <div className="min-h-screen bg-gradient-to-br mt from-sky-50 to-white">
 
       {/* Header */}
-      <h1 className='text-4xl text-center font-bold bg-white border-sky-500 border-b-2 text-sky-600 py-5'>
+      <h1 className='text-2xl md:text-3xl lg:text-4xl text-center font-bold bg-white border-sky-500 border-b-2 text-sky-600 py-5'>
         Profile
       </h1>
 
@@ -35,7 +35,7 @@ const Profile = () => {
           </div>
 
           {/* Info Section */}
-          <div className="pt-16 px-8 pb-8">
+          <div className="pt-16 px-4 lg:px-8 pb-8">
 
             {/* Name + Role */}
             <div className="flex items-center justify-between flex-wrap gap-3">
@@ -60,7 +60,7 @@ const Profile = () => {
 
               <div className="bg-sky-50 rounded-xl p-4">
                 <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-1">Email</p>
-                <p className="text-sm font-medium text-gray-700">{User?.email}</p>
+                <p className="text-sm font-medium text-gray-700 break-all lg:break-normal">{User?.email}</p>
               </div>
 
               <div className="bg-sky-50 rounded-xl p-4">
@@ -84,7 +84,7 @@ const Profile = () => {
             <div className="border-t border-gray-100 my-6" />
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
               <div className="bg-sky-50 rounded-xl p-4">
                 <p className="text-2xl font-bold text-sky-600">0</p>
                 <p className="text-xs text-gray-400 mt-1">Orders</p>

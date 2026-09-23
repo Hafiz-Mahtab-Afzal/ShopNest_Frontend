@@ -46,10 +46,10 @@ const Dashboard = () => {
   // ✅ Jab ok true hoga, ye return execute hoga
   return (
     <div className='flex'>
-        <div className="w-[23%] sticky top-0 h-screen overflow-y-auto">
+        <div className="w-0 lg:w-[23%] sticky top-0 h-screen overflow-y-auto">
          <Sidebar />
         </div>
-        <div className="w-[77%]">
+        <div className="w-full min-w-0 lg:w-[77%]">
          {/* Agar Outlet khali hai, toh yahan kuch text daal kar check karo ke ye part load ho raha hai ya nahi */}
          <Outlet />   
         </div>

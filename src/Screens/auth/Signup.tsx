@@ -64,12 +64,12 @@ const SignUp = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-sky-50 px-4 py-8">
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md overflow-hidden">
-        <div className="bg-sky-700 px-10 py-6 text-center">
+        <div className="bg-sky-700 px-6 sm:px-10 py-6 text-center">
           <h2 className="text-xl font-semibold text-white">Create Account</h2>
           <p className="text-sky-200 text-sm mt-1">Create your account</p>
         </div>
 
-        <div className="px-8 py-6">
+        <div className="px-5 sm:px-8 py-6">
           <form onSubmit={Signuphandler}>
             <div className="grid grid-cols-2 gap-3 mb-3">
               <div>

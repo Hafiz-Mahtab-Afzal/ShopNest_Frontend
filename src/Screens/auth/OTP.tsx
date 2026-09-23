@@ -51,7 +51,7 @@ const OTP = () => {
     <div className="min-h-screen flex items-center justify-center bg-sky-50 px-4">
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md overflow-hidden">
 
-        <div className="bg-sky-700 px-10 py-8 text-center">
+        <div className="bg-sky-700 px-6 sm:px-10 py-8 text-center">
           <div className="w-14 h-14 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -61,7 +61,7 @@ const OTP = () => {
           <p className="text-sky-200 text-sm mt-1">Enter the OTP sent to your email</p>
         </div>
 
-        <div className="px-10 py-8">
+        <div className="px-4 sm:px-10 py-8">
 
           <div className="flex items-center gap-3 bg-sky-50 border border-sky-200 rounded-lg px-4 py-3 mb-6">
             <FiMail className="text-sky-600 text-[18px] flex-shrink-0" />
