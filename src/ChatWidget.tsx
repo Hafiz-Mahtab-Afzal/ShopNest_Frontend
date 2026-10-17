@@ -5,8 +5,7 @@ import axios from 'axios';
 // CONFIG — Backend URL (ShopNest Production / Dev)
 // ──────────────────────────────────────────────────
 const API = 'http://localhost:5000';
-const CHAT_API = `${API}/api/v1/api/chat`;
-
+const CHAT_API = `${API}/api/chat`;
 // TypeScript Interfaces
 interface Message {
   role: 'user' | 'assistant' | 'system';
@@ -70,7 +69,7 @@ const ChatWidget: React.FC = () => {
       setMessages([
         {
           role: 'assistant',
-          content: 'Assalam-o-Alaikum! ShopNest Support mein khush aamdeed 🛍️ Main aapki kya madad kar sakta hun?'
+          content: 'Hello! Welcome to ShopNest Support 🛍️ I\'m NestBot! How can I help you today'
         }
       ]);
       setHasStarted(true);
@@ -100,13 +99,13 @@ const ChatWidget: React.FC = () => {
       } else {
         setMessages(prev => [
           ...prev,
-          { role: 'assistant', content: 'Maafi chahta hun, kuch masla hua. Dobara try karein 🙏' }
+          { role: 'assistant', content: 'Sorry, something went wrong. Please try again 🙏' }
         ]);
       }
     } catch {
       setMessages(prev => [
         ...prev,
-        { role: 'assistant', content: 'Connection error. Thodi der baad dobara try karein.' }
+        { role: 'assistant', content: 'Connection error. Please try again in a moment.' }
       ]);
     } finally {
       setLoading(false);
