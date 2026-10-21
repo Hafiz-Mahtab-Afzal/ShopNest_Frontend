@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { MdOutlineStar, MdOutlineStarBorder } from 'react-icons/md'
 import { toast } from 'react-toastify'
 import apis from '../config/apis'
+import axios from 'axios'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -82,8 +83,7 @@ const Reviews = ({ productId }: ReviewsProps) => {
     const fetchReviews = async () => {
       try {
         setLoading(true)
-        const res = await fetch(`${apis.review}/${productId}`)
-        const data = await res.json()
+        const { data } = await axios.get(`${apis.review}/${productId}`)
         if (!cancelled && data.success) setReviews(data.success.reviews)
       } catch {
         if (!cancelled) toast.error('Reviews load nahi ho sake')
@@ -102,8 +102,7 @@ const Reviews = ({ productId }: ReviewsProps) => {
   // ── Refetch after submit (plain async, no hook) ────────────────────────────
   const refetchReviews = async () => {
     try {
-      const res = await fetch(`${apis.review}/${productId}`)
-      const data = await res.json()
+      const { data } = await axios.get(`${apis.review}/${productId}`)
       if (data.success) setReviews(data.success.reviews)
     } catch {
       toast.error('Reviews load nahi ho sake')
@@ -117,13 +116,12 @@ const Reviews = ({ productId }: ReviewsProps) => {
 
     try {
       setSubmitting(true)
-      const res = await fetch(`${apis.review}/${productId}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ rating, comment }),
-      })
-      const data = await res.json()
+      // axios use kiya taake token expire ho to refreshInterceptor khud naya token le aaye
+      const { data } = await axios.post(
+        `${apis.review}/${productId}`,
+        { rating, comment },
+        { withCredentials: true }
+      )
 
       if (data.success) {
         toast.success('Review submit ho gaya!')
@@ -133,8 +131,12 @@ const Reviews = ({ productId }: ReviewsProps) => {
       }
       if (data.warning) toast.warning(data.warning)
       if (data.error) toast.error(data.error)
-    } catch {
-      toast.error('Kuch ghalat ho gaya')
+    } catch (err: unknown) {
+      // axios mein 4xx jawab catch mein aata hai - backend ka message dikhao
+      const data = (err as { response?: { data?: { warning?: string; error?: string } } }).response?.data
+      if (data?.warning) toast.warning(data.warning)
+      else if (data?.error) toast.error(data.error)
+      else toast.error('Kuch ghalat ho gaya')
     } finally {
       setSubmitting(false)
     }
